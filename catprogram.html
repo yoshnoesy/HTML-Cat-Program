@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<center>
+<head>
+<h1>Cat Program</h1>
+
+</head>
+<body>    
+<label for="inputField"></label>
+<input type="Text" id="inputField">
+<button onclick="say()">Submit</button>
+
+<div id="output"></div>
+
+</body>
+
+<script>
+	let counter = 1;
+	function say() {
+		const inputField = document.getElementById("inputField");
+		const output = document.getElementById("output");
+		const text = inputField.value;
+		const response = `${counter}.${text}<br>`;
+		output.innerHTML += response;
+		inputField.value = "";
+		counter++;
+	}
+
+</script>
+</center>
+</html>
